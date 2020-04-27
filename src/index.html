@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      Web Components driven Declarative Web Audio - Proof of concept
+    </title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <script type="module" src="scripts/index.js"></script>
+    <template id="audio">
+      <label class="slider">
+        Volume:
+        <input
+          type="range"
+          min="0"
+          max="1"
+          step="0.01"
+          value="1"
+          oninput="document.getElementById('gain').setAttribute('gain', event.target.value)"
+        />
+        <audio-context>
+          <audio
+            is="media-element-audio-source-node"
+            src="assets/demo.mp3"
+            loop
+            controls
+          >
+            <gain-node id="gain" gain="1">
+              <destination-node />
+            </gain-node>
+          </audio>
+        </audio-context>
+      </label>
+    </template>
+    <button
+      class="start"
+      onclick="this.parentNode.appendChild(document.getElementById('audio').content.cloneNode(true))"
+    >
+      Start AudioContext
+    </button>
+  </body>
+</html>

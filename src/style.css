@@ -1,0 +1,32 @@
+.start {
+    display: none;
+    margin: 60px auto;
+    background: gainsboro;
+    border: none;
+    padding: 1em 2em;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.start:hover {
+    background: whitesmoke;
+}
+
+.start:last-child {
+    display: block;
+}
+
+.slider {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 20px 20px 0;
+    margin: 60px auto;
+    border-radius: 12px;
+    background: #f1f3f4;
+}
+
+audio {
+    outline: none;
+}

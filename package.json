@@ -1,0 +1,11 @@
+{
+  "name": "declarative-web-audio",
+  "version": "1.0.0",
+  "devDependencies": {
+    "lite-server": "^2.5.4",
+    "prettier": "^2.0.5"
+  },
+  "scripts": {
+    "start": "lite-server"
+  }
+}
