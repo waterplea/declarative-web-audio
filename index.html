@@ -5,10 +5,11 @@
     <title>
       Web Components driven Declarative Web Audio - Proof of concept
     </title>
+    <link rel="icon" type="image/x-icon" href="favicon.png" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <script type="module" src="scripts/index.js"></script>
+    <script type="module" src="src/scripts/index.js"></script>
     <template id="audio">
       <label class="slider">
         Volume:
@@ -23,7 +24,7 @@
         <audio-context>
           <audio
             is="media-element-audio-source-node"
-            src="assets/demo.mp3"
+            src="src/assets/demo.mp3"
             loop
             controls
           >
