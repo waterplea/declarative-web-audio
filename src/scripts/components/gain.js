@@ -1,12 +1,11 @@
 import { InjectorElement } from "../injector-element.js";
 
 export class WCGain extends InjectorElement(HTMLElement) {
-  #node;
+  #node = new GainNode(this.inject(AudioContext));
 
   connectedCallback() {
-    this.#node = new GainNode(this.inject("context"));
-    this.provide(new Map([["node", this.#node]]));
-    this.inject("node").connect(this.#node);
+    this.provide(new Map([[AudioNode, this.#node]]));
+    this.inject(AudioNode).connect(this.#node);
   }
 
   attributeChangedCallback(name, _, value) {

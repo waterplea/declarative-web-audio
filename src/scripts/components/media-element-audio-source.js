@@ -7,8 +7,8 @@ export class WCMediaElementAudioSource extends InjectorElement(
     this.provide(
       new Map([
         [
-          "node",
-          new MediaElementAudioSourceNode(this.inject("context"), {
+          AudioNode,
+          new MediaElementAudioSourceNode(this.inject(AudioContext), {
             mediaElement: this,
           }),
         ],

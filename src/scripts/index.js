@@ -4,6 +4,8 @@ import { WCGain } from "./components/gain.js";
 import { WCDestination } from "./components/destination.js";
 
 customElements.define("audio-context", WCAudioContext);
+customElements.define("gain-node", WCGain);
+customElements.define("destination-node", WCDestination);
 customElements.define(
   "media-element-audio-source-node",
   WCMediaElementAudioSource,
@@ -11,5 +13,3 @@ customElements.define(
     extends: "audio",
   }
 );
-customElements.define("gain-node", WCGain);
-customElements.define("destination-node", WCDestination);
